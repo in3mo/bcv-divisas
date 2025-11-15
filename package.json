@@ -5,13 +5,23 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs":"jsdoc -c jsdoc.json"
+    "start": "node src/index.js",
+    "docs": "jsdoc -c jsdoc.json"
   },
-  "keywords": ["venezuela","bcv","dolartoday","dolarToday","paralelo","dolar","euro","peso"],
+  "keywords": [
+    "venezuela",
+    "bcv",
+    "dolartoday",
+    "dolarToday",
+    "paralelo",
+    "dolar",
+    "euro",
+    "peso"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "axios": "1.2.1",
+    "axios": "^1.13.2",
     "cheerio": "1.0.0-rc.12",
     "jsdoc": "4.0.0"
   },
@@ -25,6 +35,5 @@
   "homepage": "https://github.com/stolenLeaf/bcv-divisas#readme",
   "directories": {
     "doc": "docs"
-  },
-  "devDependencies": {}
+  }
 }
