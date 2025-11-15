@@ -12,7 +12,7 @@ const httpsAgent = new https.Agent({ rejectUnauthorized: false })
  * @yields {Promise} Promise object that contains the following propierties '_dolar','_euro','_yuan','_lira','_rublo', all are number type
  */
 const bcvDolar = async() => {
-        const result=await axios.get('https://www.bcv.org.ve',{httpsAgent})
+        const result=await axios.get('https://bcv.org.ve',{httpsAgent})
         const $ =cheerio.load(result.data)
         const dolar = formato($('#dolar').text())
         const euro  = formato($('#euro').text(),1)
@@ -28,6 +28,9 @@ const bcvDolar = async() => {
         }  
         
 }
+
+bcvDolar();
+
 /**
  * asynchronous method, get the currency values from the DolarToday website, the web site update daily
  * @async
